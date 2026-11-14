@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Панель управления — Инвест Ордер</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/admin.css">
+</head>
+<body class="admin">
+<div class="adm">
+  <aside class="adm-side" id="side">
+    <a href="index.html" class="logo"><svg viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="11" fill="#073a50" stroke="#45d6c6" stroke-opacity=".4"/><path d="M12 28V12" stroke="#45d6c6" stroke-width="2.2" stroke-linecap="round"/><circle cx="24.5" cy="20" r="7.5" stroke="#fff" stroke-width="2.2"/></svg><span>Инвест Ордер<small>панель управления</small></span></a>
+    <nav class="adm-nav" id="admNav" aria-label="Разделы панели"></nav>
+    <div class="adm-side__foot">
+      <div class="role-pick"><label for="role">Роль (демо)</label><select id="role"></select></div>
+      <div class="adm-me"><div class="avatar" id="meAv" style="width:36px;height:36px;font-size:12px">АС</div><div><b id="meName">—</b><span id="meRole">—</span></div></div>
+    </div>
+  </aside>
+
+  <div class="adm-main">
+    <header class="adm-top">
+      <button class="icon-btn adm-burger" id="admBurger" aria-label="Меню"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 8h16M4 16h16"/></svg></button>
+      <label class="adm-search"><span class="sr-only">Поиск</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg><input id="q" placeholder="Поиск по разделу: имя, проект, документ…" autocomplete="off"></label>
+      <div class="adm-top__right">
+        <span class="badge-2fa"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>2FA включена</span>
+        <a href="index.html" class="btn btn--ghost btn--xs">На сайт</a>
+        <a href="auth.html?mode=staff" class="btn btn--ghost btn--xs">Выйти</a>
+      </div>
+    </header>
+    <div id="views"></div>
+  </div>
+</div>
+
+<div class="drawer" id="drawer" aria-hidden="true"><div class="drawer__bg" data-dclose></div><div class="drawer__box" role="dialog" aria-modal="true"><button class="icon-btn drawer__close" data-dclose aria-label="Закрыть"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></button><div id="drawerBody"></div></div></div>
+<div class="toasts" id="toasts" aria-live="polite"></div>
+
+<script src="assets/js/data.js"></script>
+<script src="assets/js/admin.js"></script>
+</body>
+</html>

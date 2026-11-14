@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Проекты — Инвест Ордер</title>
+<meta name="description" content="Каталог инвестиционных проектов в недвижимости: строительство, участки под застройщика, срочный выкуп.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="catalog">
+<div id="site-header"></div>
+<main>
+  <section class="page-hero">
+    <div class="container">
+      <nav class="crumbs" data-reveal="fade"><a href="index.html">Главная</a>/<span>Проекты</span></nav>
+      <h1 class="split">Каталог <em>проектов</em></h1>
+      <p class="lead" data-reveal style="--d:.3s">Все проекты размещает команда после внутренней проверки и утверждения модели, бюджета, юридической схемы и комиссий.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:20px">
+    <div class="container catalog">
+      <aside class="filters" id="filters" aria-label="Фильтры">
+        <div class="filters__head"><h3>Фильтры</h3><button class="reset" data-reset>Сбросить</button><button class="icon-btn filters-toggle" id="filtersClose" aria-label="Закрыть фильтры"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+        <div><h4>Направление</h4><div class="chips">
+          <label class="chip"><input type="checkbox" name="dir" value="build"><span>Строительство</span></label>
+          <label class="chip"><input type="checkbox" name="dir" value="land"><span>Участок → метры</span></label>
+          <label class="chip"><input type="checkbox" name="dir" value="resale"><span>Срочный выкуп</span></label>
+        </div></div>
+        <div><h4>Регион</h4><div class="chips" id="fRegion"></div></div>
+        <div class="range"><h4 style="margin:0">Минимальная сумма</h4><input type="range" id="fMin" min="0" max="5" step="1" value="0" aria-label="Минимальная сумма участия"><div class="range__val"><span>Порог входа</span><b id="fMinVal">любая</b></div></div>
+        <div><h4>Модель заработка</h4><div class="chips">
+          <label class="chip"><input type="checkbox" name="model" value="rent"><span>Аренда</span></label>
+          <label class="chip"><input type="checkbox" name="model" value="sale"><span>Продажа</span></label>
+          <label class="chip"><input type="checkbox" name="model" value="mixed"><span>Аренда + продажа</span></label>
+          <label class="chip"><input type="checkbox" name="model" value="meters"><span>Метры</span></label>
+        </div></div>
+        <div class="range"><h4 style="margin:0">Срок реализации</h4><input type="range" id="fTerm" min="6" max="48" step="6" value="48" aria-label="Максимальный срок реализации"><div class="range__val"><span>Не дольше</span><b id="fTermVal">любой</b></div></div>
+        <div><h4>Состояние набора</h4><div class="chips">
+          <label class="chip"><input type="checkbox" name="status" value="open"><span>Открыт</span></label>
+          <label class="chip"><input type="checkbox" name="status" value="soon"><span>Скоро</span></label>
+          <label class="chip"><input type="checkbox" name="status" value="paused"><span>Приостановлен</span></label>
+          <label class="chip"><input type="checkbox" name="status" value="closed"><span>Закрыт</span></label>
+        </div></div>
+      </aside>
+
+      <div>
+        <div class="toolbar">
+          <div class="toolbar__count"><b id="count">6</b><span id="countWord">проектов</span></div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <button class="btn btn--ghost btn--sm filters-toggle" id="filtersOpen">Фильтры</button>
+            <label class="select-pill"><span class="sr-only">Сортировка</span><select id="sort"><option value="new">Сначала новые</option><option value="pct">По проценту сбора</option><option value="min">По минимальной сумме</option><option value="term">По сроку</option></select></label>
+          </div>
+        </div>
+        <div class="projects" id="catalogGrid"></div>
+        <div class="empty" id="empty"><h3>Ничего не нашлось</h3><p class="muted">Попробуйте ослабить фильтры или оставьте заявку — расскажем о проектах в подготовке.</p><button class="btn btn--ghost btn--sm" data-reset>Сбросить фильтры</button></div>
+      </div>
+    </div>
+  </section>
+</main>
+<div id="site-footer"></div>
+<script src="assets/js/lines.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

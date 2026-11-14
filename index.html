@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Инвест Ордер — инвестиционное сообщество в недвижимости</title>
+<meta name="description" content="Проекты в коммерческой недвижимости, подготовке участков и срочном выкупе. Обособленный учёт, открытые комиссии, квартальные отчёты.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="home">
+<div class="preloader" aria-hidden="true">
+  <svg class="preloader__mark" viewBox="0 0 40 40"><rect pathLength="1" x="1" y="1" width="38" height="38" rx="11"/><path pathLength="1" d="M12 28V12"/><path pathLength="1" d="M17 20a7.5 7.5 0 1015 0 7.5 7.5 0 10-15 0"/></svg>
+  <div class="preloader__word">Инвест Ордер</div>
+</div>
+
+<div id="site-header"></div>
+
+<main>
+  <!-- HERO -->
+  <section class="hero hero--line">
+    <div class="hero-draw" id="heroDraw" aria-hidden="true"></div>
+    <div class="container">
+      <div class="hero__grid">
+        <div>
+          <span class="eyebrow" data-reveal="fade">Инвестиционное сообщество · недвижимость</span>
+          <h1 class="split">Недвижимость, в&nbsp;которой видно <em>каждый рубль</em></h1>
+          <p class="lead" data-reveal style="--d:.5s">Мы отбираем и реализуем проекты: строим коммерческие объекты, готовим участки для застройщиков и выкупаем недвижимость ниже рынка. Вы выбираете проект и участвуете суммой, которая вам подходит.</p>
+          <div class="hero__ctas" data-reveal style="--d:.65s">
+            <a href="catalog.html" class="btn" data-magnetic>Смотреть проекты <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+            <a href="how.html" class="btn btn--ghost" data-magnetic>Как устроено участие</a>
+          </div>
+        </div>
+      </div>
+      <a class="hero-note-card" href="project.html?id=io-101" data-reveal style="--d:1.4s">
+        <span class="hero-note-card__k">IO-101 · Подольск · демо</span>
+        <b>Складской комплекс «Северный»</b>
+        <span class="hero-note-card__row"><span>Собрано</span><strong>20 из 40 млн ₽</strong></span>
+        <span class="hero-note-card__bar"><i></i></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="hero-stats-wrap">
+    <div class="container">
+      <div class="hero__stats">
+        <div class="stat" data-reveal style="--d:.1s"><b data-count="6">6</b><span>проектов в каталоге (демо)</span></div>
+        <div class="stat" data-reveal style="--d:.2s"><b><span data-count="5">5</span></b><span>регионов присутствия</span></div>
+        <div class="stat" data-reveal style="--d:.3s"><b><span data-count="10">10</span><sup>%</sup></b><span>комиссия с инвестора — отдельной строкой, не «в цене»</span></div>
+        <div class="stat" data-reveal style="--d:.4s"><b><span data-count="4">4</span><sup>×</sup></b><span>отчёта в год по каждому действующему проекту</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee" aria-hidden="true"><div class="marquee__track">
+    <span class="marquee__item">Москва</span><span class="marquee__item">Московская область</span><span class="marquee__item">Санкт-Петербург</span><span class="marquee__item">Минеральные Воды</span><span class="marquee__item">Дагестан</span><span class="marquee__item">Склады и ангары ЛСТК</span><span class="marquee__item">Участки под застройку</span><span class="marquee__item">Срочный выкуп</span>
+    <span class="marquee__item">Москва</span><span class="marquee__item">Московская область</span><span class="marquee__item">Санкт-Петербург</span><span class="marquee__item">Минеральные Воды</span><span class="marquee__item">Дагестан</span><span class="marquee__item">Склады и ангары ЛСТК</span><span class="marquee__item">Участки под застройку</span><span class="marquee__item">Срочный выкуп</span>
+  </div></div>
+
+  <!-- НАПРАВЛЕНИЯ -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div><span class="eyebrow" data-reveal>Направления</span><h2 class="split">Три понятные модели <em>заработка</em></h2></div>
+        <p class="lead" data-reveal style="--d:.2s">Поля, этапы и показатели зависят от направления: например, арендная окупаемость показывается только там, где есть аренда.</p>
+      </div>
+      <div class="directions" id="directions"></div>
+    </div>
+  </section>
+
+  <!-- ПРОЕКТЫ -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section__head">
+        <div><span class="eyebrow" data-reveal>Проекты</span><h2 class="split">Открытые <em>наборы</em></h2></div>
+        <a href="catalog.html" class="link-arrow" data-reveal>Весь каталог <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="projects" id="homeProjects"></div>
+    </div>
+  </section>
+
+  <!-- ПРОЦЕСС -->
+  <section class="section section--dark on-dark">
+    <div class="blueprint-bg"></div>
+    <div class="container" style="position:relative">
+      <div class="section__head">
+        <div><span class="eyebrow" data-reveal>Порядок участия</span><h2 class="split">От заявки до <em>выплаты</em></h2></div>
+        <a href="how.html" class="btn btn--ghost btn--sm" data-reveal>Подробнее</a>
+      </div>
+      <div class="process">
+        <div class="process__line"><i></i></div>
+        <div class="step" data-reveal style="--d:.1s"><div class="step__dot">1</div><div><h4>Заявка</h4><p>Выбираете проект и сумму. Регистрация не обязательна.</p></div></div>
+        <div class="step" data-reveal style="--d:.25s"><div class="step__dot">2</div><div><h4>Обсуждение</h4><p>Менеджер разбирает с вами модель, условия и риски лично.</p></div></div>
+        <div class="step" data-reveal style="--d:.4s"><div class="step__dot">3</div><div><h4>Документы</h4><p>Подписание вне сайта, перевод на счёт юрлица проекта.</p></div></div>
+        <div class="step" data-reveal style="--d:.55s"><div class="step__dot">4</div><div><h4>Реализация</h4><p>Квартальные отчёты, фото и видео, этапы в кабинете.</p></div></div>
+        <div class="step" data-reveal style="--d:.7s"><div class="step__dot">5</div><div><h4>Выплаты</h4><p>По утверждённой модели проекта — план и факт раздельно.</p></div></div>
+      </div>
+      <div class="process-note" data-reveal><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5"/></svg><span>На сайте нет кнопки оплаты и электронного подписания. Заявка не резервирует место и не увеличивает сбор — участие подтверждается командой после подписания и фактического поступления средств.</span></div>
+    </div>
+  </section>
+
+  <!-- КОМИССИИ -->
+  <section class="section">
+    <div class="container">
+      <div class="section__head">
+        <div><span class="eyebrow" data-reveal>Прозрачность</span><h2 class="split">Как зарабатывает <em>компания</em></h2></div>
+        <p class="lead" data-reveal style="--d:.2s">Блок вознаграждения есть в каждой карточке проекта: плательщик, ставка, база, момент оплаты и отражение в бюджете.</p>
+      </div>
+      <div class="fees">
+        <div class="fee" data-reveal style="--d:.05s"><span class="fee__who">Платит собственник объекта</span><div class="fee__rate" style="margin-top:14px"><span data-count="10">10</span><sup>%</sup></div><h4>Комиссия с продавца</h4><p>Берётся с собственника, у которого приобретается объект. Не вычитается из денег инвесторов.</p></div>
+        <div class="fee" data-reveal style="--d:.15s"><span class="fee__who">Платит инвестор</span><div class="fee__rate" style="margin-top:14px"><span data-count="10">10</span><sup>%</sup></div><h4>Комиссия с инвестора</h4><p>Отдельной строкой от суммы участия. В карточке указано, входит ли она в сумму или оплачивается сверх.</p></div>
+        <div class="fee fee--manage on-dark" data-reveal style="--d:.25s"><span class="fee__who">Последующее управление</span><div class="fee__rate">Индивидуально</div><h4 style="color:#fff">По условиям конкретного проекта</h4><p>Содержание услуг, период, ставка и база. Пока условия не согласованы, итоговая доходность помечается как предварительная.</p></div>
+      </div>
+      <div class="not-20" data-reveal><b>20%</b><span>Две комиссии берутся с разных плательщиков и от разных баз, поэтому их нельзя складывать в одну ставку. Мы так и не делаем.</span></div>
+    </div>
+  </section>
+
+  <!-- ДОСТУП -->
+  <section class="section section--paper">
+    <div class="container">
+      <div class="section__head">
+        <div><span class="eyebrow" data-reveal>Что вы видите</span><h2 class="split">Открыто всем — и <em>после обсуждения</em></h2></div>
+      </div>
+      <div class="access">
+        <div class="access__col" data-reveal="left">
+          <h3><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Публично</h3>
+          <ul class="checklist"><li>Описание, город и общая локация</li><li>Бюджет, целевой сбор, фактически полученные средства</li><li>Модель участия и распределения результата</li><li>Прогноз доходности с периодом и составом вычетов</li><li>Юридическая модель и механизмы защиты</li><li>Этапы, разрешённые фото и вознаграждение компании</li></ul>
+        </div>
+        <div class="access__col access__col--closed on-dark" data-reveal="right">
+          <div class="blueprint-bg"></div>
+          <h3 style="position:relative"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>По решению команды</h3>
+          <ul class="checklist" style="position:relative"><li>Точный адрес объекта</li><li>Подробная финансовая модель и допущения</li><li>Договоры, сметы, документы на объект и участок</li><li>Индивидуальные условия участия</li><li>Отчёты — только участникам проекта</li><li>Доступ выдаётся к конкретному проекту и может быть отозван</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- О НАС -->
+  <section class="section">
+    <div class="container about-split">
+      <div>
+        <span class="eyebrow" data-reveal>О сообществе</span>
+        <p class="big-quote split" style="margin-top:24px">Мы находим объекты, проверяем их, считаем экономику и ведём проект <em>от покупки участка до выхода</em> — а участники видят, что происходит с их деньгами.</p>
+        <a href="about.html" class="link-arrow" data-reveal style="margin-top:20px">О команде <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+      <div class="pillars">
+        <div class="pillar" data-reveal="right" style="--d:.05s"><div class="pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 21h18M6 21V10l6-5 6 5v11"/></svg></div><div><h4>Опыт в стройке и сделках</h4><p>Девелопмент, строительство ЛСТК, сделки с землёй и коммерческой недвижимостью.</p></div></div>
+        <div class="pillar" data-reveal="right" style="--d:.15s"><div class="pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="10" r="3"/><path d="M12 21s7-6.5 7-11a7 7 0 10-14 0c0 4.5 7 11 7 11z"/></svg></div><div><h4>Знание рынков изнутри</h4><p>Работаем только там, где понимаем цены, спрос и подрядчиков.</p></div></div>
+        <div class="pillar" data-reveal="right" style="--d:.25s"><div class="pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 12l2 2 4-4"/><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/></svg></div><div><h4>Опыт согласований</h4><p>Оформление земли, разрешения, работа с застройщиками и проектировщиками.</p></div></div>
+        <div class="pillar" data-reveal="right" style="--d:.35s"><div class="pillar__ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg></div><div><h4>Учёт по каждому проекту</h4><p>Поступления, расходы, комиссии и выплаты — обособленно, со сверкой по банку.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="padding-top:0">
+    <div class="container">
+      <div class="cta on-dark cta-form" data-reveal="scale">
+        <div class="cta__glow"></div>
+        <div style="position:relative">
+          <span class="eyebrow">Заявка</span>
+          <h2 style="margin:20px 0 22px">Обсудим <em>участие</em></h2>
+          <p class="lead">Оставьте контакты — менеджер расскажет о проектах, модели участия и рисках. Без обязательств и без регистрации.</p>
+        </div>
+        <div style="position:relative" id="ctaForm"></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/lines.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pages.js"></script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Вход — Инвест Ордер</title>
+<meta name="robots" content="noindex, nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Golos+Text:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/auth.css">
+</head>
+<body class="auth">
+<div class="auth-wrap">
+  <aside class="auth-art on-dark" aria-hidden="true">
+    <a href="index.html" class="logo"><svg viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="11" fill="#073a50" stroke="#45d6c6" stroke-opacity=".4"/><path d="M12 28V12" stroke="#45d6c6" stroke-width="2.2" stroke-linecap="round"/><circle cx="24.5" cy="20" r="7.5" stroke="#fff" stroke-width="2.2"/></svg><span>Инвест Ордер<small>инвестиционное сообщество</small></span></a>
+    <div class="auth-art__glow"></div>
+    <div class="auth-art__bp blueprint-host" id="authBp"></div>
+    <div class="auth-art__text">
+      <h2 class="split">Ваши проекты, документы и отчёты — <em>в одном месте</em></h2>
+      <ul class="auth-art__points">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19V5M4 19h16M8 15l4-4 3 3 5-6"/></svg>Квартальные отчёты, фото и видео с объектов</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M3 10h18"/></svg>Внесённые средства, комиссии и выплаты — раздельно</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 018 0v4"/></svg>Регистрация не открывает закрытые материалы автоматически</li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="auth-main">
+    <div class="auth-top">
+      <a href="index.html" class="logo"><svg viewBox="0 0 40 40" fill="none"><rect x="1" y="1" width="38" height="38" rx="11" fill="#0b4f6c"/><path d="M12 28V12" stroke="#45d6c6" stroke-width="2.2" stroke-linecap="round"/><circle cx="24.5" cy="20" r="7.5" stroke="#fff" stroke-width="2.2"/></svg><span>Инвест Ордер</span></a>
+      <a href="index.html" class="link-arrow" style="margin-left:auto;font-size:14px"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="transform:rotate(180deg)"><path d="M5 12h14M13 6l6 6-6 6"/></svg>На сайт</a>
+    </div>
+
+    <div class="auth-box">
+      <div class="auth-tabs" id="tabs" data-tab="login" role="tablist">
+        <span class="auth-tabs__pill"></span>
+        <button role="tab" data-tab="login" class="is-active">Вход</button>
+        <button role="tab" data-tab="register">Регистрация</button>
+      </div>
+
+      <!-- ВХОД -->
+      <section class="step is-active" data-step="login">
+        <h1>С возвращением</h1>
+        <p class="step__lead">Войдите, чтобы увидеть заявки, участие и отчёты по проектам.</p>
+        <form class="form" id="fLogin" novalidate>
+          <div class="field"><input name="login" id="l-login" placeholder=" " autocomplete="username" required><label for="l-login">Телефон или e-mail</label><div class="field__err">Укажите телефон или e-mail</div></div>
+          <div class="field pw-field"><input type="password" name="password" id="l-pw" placeholder=" " autocomplete="current-password" required><label for="l-pw">Пароль</label><button type="button" class="pw-toggle" aria-label="Показать пароль"></button><div class="field__err">Введите пароль</div></div>
+          <div class="err-box" id="loginErr"></div>
+          <div class="row-between"><label class="check" style="font-size:13.5px"><input type="checkbox" name="remember" checked><span>Запомнить устройство</span></label><button type="button" class="text-link" data-go="recover">Забыли пароль?</button></div>
+          <button class="btn btn--block" type="submit">Войти <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+          <div class="divider">или</div>
+          <button type="button" class="btn btn--ghost btn--block" data-go="code">Войти по коду из SMS</button>
+        </form>
+        <a href="#" class="staff-link" data-go="staff"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg>Вход для сотрудников с двухфакторной защитой</a>
+      </section>
+
+      <!-- ВХОД ПО КОДУ: ТЕЛЕФОН -->
+      <section class="step" data-step="code">
+        <h1>Вход по коду</h1>
+        <p class="step__lead">Отправим одноразовый код на телефон, указанный при регистрации или в заявке.</p>
+        <form class="form" id="fCode" novalidate>
+          <div class="field"><input name="phone" id="c-phone" placeholder=" " inputmode="tel" autocomplete="tel" required><label for="c-phone">Телефон</label><div class="field__err">Проверьте номер телефона</div></div>
+          <button class="btn btn--block" type="submit">Получить код</button>
+          <button type="button" class="text-link" data-back="login" style="justify-self:start">← Войти по паролю</button>
+        </form>
+      </section>
+
+      <!-- РЕГИСТРАЦИЯ -->
+      <section class="step" data-step="register">
+        <h1>Регистрация</h1>
+        <p class="step__lead">Если вы уже оставляли заявку, после подтверждения телефона мы привяжем её к кабинету — без дублей.</p>
+        <form class="form" id="fReg" novalidate>
+          <div class="field"><input name="name" id="r-name" placeholder=" " autocomplete="name" required><label for="r-name">Имя и фамилия</label><div class="field__err">Укажите имя</div></div>
+          <div class="form__row">
+            <div class="field"><input name="phone" id="r-phone" placeholder=" " inputmode="tel" autocomplete="tel" required><label for="r-phone">Телефон</label><div class="field__err">Проверьте номер</div></div>
+            <div class="field"><input name="email" id="r-email" type="email" placeholder=" " autocomplete="email"><label for="r-email">E-mail (необязательно)</label><div class="field__err">Проверьте e-mail</div></div>
+          </div>
+          <div>
+            <div class="field pw-field"><input type="password" name="password" id="r-pw" placeholder=" " autocomplete="new-password" required><label for="r-pw">Придумайте пароль</label><button type="button" class="pw-toggle" aria-label="Показать пароль"></button><div class="field__err">Пароль ненадёжный. Добавьте буквы, цифры или длину</div></div>
+            <div class="pwm" data-for="r-pw"></div>
+          </div>
+          <input type="text" name="website" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+          <label class="check"><input type="checkbox" name="pd" required><span>Даю <a href="#">согласие на обработку персональных данных</a></span></label>
+          <label class="check"><input type="checkbox" name="terms" required><span>Принимаю <a href="#">пользовательское соглашение</a> и понимаю, что регистрация не даёт доступа к закрытым материалам проектов</span></label>
+          <button class="btn btn--block" type="submit">Продолжить <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+        </form>
+      </section>
+
+      <!-- ВВОД КОДА (общий) -->
+      <section class="step" data-step="otp">
+        <h1 id="otpTitle">Подтвердите телефон</h1>
+        <p class="step__lead" id="otpLead">Код отправлен на <b id="otpPhone"></b>.</p>
+        <div class="otp" id="otp" role="group" aria-label="Код из 6 цифр"></div>
+        <div class="otp-meta"><span class="demo-hint" id="otpHint">Демо-код: 123456</span><button type="button" class="text-link" id="resend" disabled>Отправить снова через 0:59</button></div>
+        <div class="err-box" id="otpErr" style="margin-top:14px"></div>
+        <button type="button" class="text-link" id="otpBack" style="margin-top:22px">← Изменить номер</button>
+      </section>
+
+      <!-- ПРИВЯЗКА ЗАЯВОК -->
+      <section class="step" data-step="link">
+        <svg class="done-ico" viewBox="0 0 80 80"><circle pathLength="1" cx="40" cy="40" r="36"/><path pathLength="1" d="M24 41l11 11 21-23"/></svg>
+        <h1>Телефон подтверждён</h1>
+        <p class="step__lead" id="linkLead"></p>
+        <div class="found" id="found"></div>
+        <a class="btn btn--block" href="cabinet.html">Перейти в кабинет <svg class="arr" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <p class="muted" style="font-size:13px;margin-top:16px">Статус проверки: <b>кандидат</b>. Доступ к материалам конкретного проекта команда открывает после обсуждения.</p>
+      </section>
+
+      <!-- ВОССТАНОВЛЕНИЕ -->
+      <section class="step" data-step="recover">
+        <h1>Восстановление доступа</h1>
+        <p class="step__lead">Укажите телефон или e-mail. Если аккаунт существует, мы отправим код. По соображениям безопасности мы не сообщаем, зарегистрирован ли адрес.</p>
+        <form class="form" id="fRec" novalidate>
+          <div class="field"><input name="login" id="rc-login" placeholder=" " autocomplete="username" required><label for="rc-login">Телефон или e-mail</label><div class="field__err">Укажите телефон или e-mail</div></div>
+          <button class="btn btn--block" type="submit">Отправить код</button>
+          <button type="button" class="text-link" data-back="login" style="justify-self:start">← Вернуться ко входу</button>
+        </form>
+      </section>
+
+      <section class="step" data-step="newpw">
+        <h1>Новый пароль</h1>
+        <p class="step__lead">После смены пароля все другие сессии будут завершены.</p>
+        <form class="form" id="fNew" novalidate>
+          <div class="field pw-field"><input type="password" name="p1" id="n-p1" placeholder=" " autocomplete="new-password" required><label for="n-p1">Новый пароль</label><button type="button" class="pw-toggle" aria-label="Показать пароль"></button><div class="field__err">Пароль ненадёжный. Добавьте буквы, цифры или длину</div></div>
+          <div class="pwm" data-for="n-p1"></div>
+          <div class="field pw-field"><input type="password" name="p2" id="n-p2" placeholder=" " autocomplete="new-password" required><label for="n-p2">Повторите пароль</label><button type="button" class="pw-toggle" aria-label="Показать пароль"></button><div class="field__err">Пароли не совпадают</div></div>
+          <button class="btn btn--block" type="submit">Сохранить и войти</button>
+        </form>
+      </section>
+
+      <!-- СОТРУДНИКИ -->
+      <section class="step" data-step="staff">
+        <span class="eyebrow">Для команды</span>
+        <h1 style="margin-top:12px">Вход сотрудника</h1>
+        <p class="step__lead">Рабочая почта, пароль и код из приложения-аутентификатора.</p>
+        <form class="form" id="fStaff" novalidate>
+          <div class="field"><input name="email" id="s-email" type="email" placeholder=" " autocomplete="username" required><label for="s-email">Рабочий e-mail</label><div class="field__err">Укажите рабочий e-mail</div></div>
+          <div class="field pw-field"><input type="password" name="password" id="s-pw" placeholder=" " autocomplete="current-password" required><label for="s-pw">Пароль</label><button type="button" class="pw-toggle" aria-label="Показать пароль"></button><div class="field__err">Введите пароль</div></div>
+          <button class="btn btn--block" type="submit">Далее</button>
+          <button type="button" class="text-link" data-back="login" style="justify-self:start">← Вход для инвесторов</button>
+        </form>
+      </section>
+    </div>
+
+    <p class="auth-foot">Прототип · данные не отправляются · демо-код 123456</p>
+  </main>
+</div>
+
+<script src="assets/js/lines.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/auth.js"></script>
+</body>
+</html>
